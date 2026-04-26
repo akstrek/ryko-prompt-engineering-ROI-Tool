@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", "Bebas Neue", "Impact", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-poppy: #D8560E;
+  --color-magenta: #FF00FF;
+  --color-yellow: #9FF700;
+  --color-roi-pink: #FF69B4;
+  --color-resp-b-bg: #BAFCA2;
+  --color-resp-b-text: #2FFF2F;
+  --color-nav-green: #2FFF2F;
+  --color-off-white: #F5F5F5;
+  --color-dark-canvas: #1A1A1A;
+  --color-dark-card: #0A0A0A;
+
+  --color-background: var(--bg-color, #2B2B23);
+  --color-foreground: var(--fg-color, #000000);
+}
+
+:root {
+  --bg-color: #2B2B23;
+  --fg-color: #000000;
+  --nav-bar-bg: #000000;
+}
+
+.dark {
+  --bg-color: #0D0D0D;
+  --fg-color: #F5F5F5;
+  --nav-bar-bg: #1A1A1A;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(rgba(239, 206, 123, 0.18) 1px, transparent 1px);
+    background-size: 4px 4px;
+    font-family: var(--font-sans);
+    color: var(--fg-color);
+    @apply antialiased transition-colors duration-300;
+  }
+
+  .dark body {
+    background-color: #0D0D0D;
+    background-image: radial-gradient(rgba(239, 206, 123, 0.1) 1px, transparent 1px);
+  }
+
+  canvas {
+    @apply block;
+  }
+}
+
+@layer components {
+  .chamfer-card {
+    clip-path: polygon(16px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 16px);
+  }
+
+  /* Scrollbar hide utility */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+

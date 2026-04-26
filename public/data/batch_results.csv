@@ -1,0 +1,6 @@
+id,roi_score,quality_delta,token_delta,grade
+RUN_001,42.5,15,200,high
+RUN_002,28.1,10,150,medium
+RUN_003,12.4,-5,300,low
+RUN_004,55.2,30,100,high
+RUN_005,31.8,12,400,medium

@@ -1,0 +1,2 @@
+prompt_a,prompt_b,response_a,response_b,quality_a,quality_b,quality_delta,tokens_a,tokens_b,token_delta,cost_a,cost_b,cost_delta,roi_score,scores_a,scores_b,interpretation
+"Summarize article.","Expert analyst summary.","Basic summary.","Detailed expert insight with bullets and evidence.",62,89,27,120,340,220,0.0004,0.0011,0.0007,38.57,"[58,65,70,55]","[88,92,85,91]","27% quality gain at 2.8x token cost"
